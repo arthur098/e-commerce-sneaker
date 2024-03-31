@@ -1,0 +1,74 @@
+.header-section {
+  width: 100%;
+  box-shadow: 2px 1px 5px black;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+}
+
+.hamburguer-menu {
+  display: block;
+  background: url("/assets/img/icon-menu.svg") no-repeat;
+  border: none;
+  text-indent: -9999px;
+  width: 16px;
+  height: 15px;
+}
+
+#close-menu-button {
+  display: block;
+  background: url("/assets/img/icon-close.svg");
+  border: none;
+  text-indent: -9999px;
+  width: 14px;
+  height: 15px;
+}
+
+.nav-menu {
+  position: absolute;
+  top: 0;
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    li {
+      margin: 3px;
+    }
+  }
+}
+
+.logo {
+  display: block;
+  background: url("/assets/img/logo.svg") no-repeat;
+  text-indent: -9999px;
+  width: 138px;
+  height: 20px;
+}
+
+.cart {
+  background: url("/assets/img/icon-cart.svg") no-repeat;
+  border: none;
+  text-indent: -9999px;
+  width: 22px;
+  height: 20px;
+}
+
+.avatar {
+  background: url("/assets/img/image-avatar.png") no-repeat center;
+  border: none;
+  text-indent: -9999px;
+  width: 22px;
+  height: 20px;
+  background-size: cover;
+}
+
+.cart:hover,
+.hamburguer-menu:hover {
+  opacity: .5;
+}
