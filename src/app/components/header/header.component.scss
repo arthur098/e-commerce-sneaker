@@ -1,6 +1,15 @@
+@import "../../../variables";
+
 .header-section {
   width: 100%;
   box-shadow: 2px 1px 5px black;
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .main-header {
@@ -29,16 +38,35 @@
   height: 15px;
 }
 
-.nav-menu {
+.nav-wrapper {
   position: absolute;
   top: 0;
+  left: 0;
+  transition: left .3s, transform .3s;
+  width: 0;
+  height: 100%;
+  z-index: 2;
+  transform: scaleX(0);
+}
+
+.nav-menu {
+  background-color: white;
+  padding: 20px;
+  min-width: 200px;
+  height: 100%;
   ul {
     display: flex;
     flex-direction: column;
     list-style-type: none;
     padding: 0;
     li {
-      margin: 3px;
+      margin: 10px 3px 3px 0;
+
+      a {
+        color: $color-accent-very-dark-blue;
+        font-weight: 700;
+        text-decoration: none;
+      }
     }
   }
 }
@@ -49,6 +77,14 @@
   text-indent: -9999px;
   width: 138px;
   height: 20px;
+  margin-left: 20px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .cart {
@@ -66,6 +102,7 @@
   width: 22px;
   height: 20px;
   background-size: cover;
+  margin-left: 20px;
 }
 
 .cart:hover,

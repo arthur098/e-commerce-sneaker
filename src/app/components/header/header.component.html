@@ -1,29 +1,35 @@
 <section class="header-section">
   <header class="main-header">
-    <button type="button" class="hamburguer-menu" rel="List menu">
-      List menu
-    </button>
+    <div class="logo-wrapper">
+      <button type="button" class="hamburguer-menu" rel="List menu" (click)="openMenu()">
+        List menu
+      </button>
 
-    <a class="logo" href="javascript:void(0);">logo</a>
+      <a class="logo" href="javascript:void(0);">logo</a>
+    </div>
 
-    <nav class="nav-menu">
-      <button type="button" id="close-menu-button"></button>
-      <ul>
-        <li><a href="javascript:void(0);">Collections</a></li>
-        <li><a href="javascript:void(0);">Men</a></li>
-        <li><a href="javascript:void(0);">Women</a></li>
-        <li><a href="javascript:void(0);">About</a></li>
-        <li><a href="javascript:void(0);">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="nav-wrapper">
+      <nav class="nav-menu">
+        <button type="button" id="close-menu-button" (click)="closeMenu()"></button>
+        <ul>
+          <li><a href="javascript:void(0);">Collections</a></li>
+          <li><a href="javascript:void(0);">Men</a></li>
+          <li><a href="javascript:void(0);">Women</a></li>
+          <li><a href="javascript:void(0);">About</a></li>
+          <li><a href="javascript:void(0);">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
 
-    <button type="button" class="cart" rel="Cart">
-      Cart
-    </button>
+    <div class="profile">
+      <button type="button" class="cart" rel="Cart">
+        Cart
+      </button>
 
-    <button type="button" class="avatar" rel="Avatar">
-      Avatar
-    </button>
+      <button type="button" class="avatar" rel="Avatar">
+        Avatar
+      </button>
+    </div>
 
   </header>
 </section>
