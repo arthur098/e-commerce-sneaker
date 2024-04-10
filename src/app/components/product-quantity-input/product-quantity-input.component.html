@@ -1,0 +1,9 @@
+<div class="input-wrapper">
+  <button type="button" (click)="minus()" [disabled]="input == 0">
+    <img src="assets/img/icon-minus.svg" alt="Minus product icon">
+  </button>
+  <input type="text" [value]="input" disabled>
+  <button type="button" (click)="add()">
+    <img src="assets/img/icon-plus.svg" alt="Add product icon">
+  </button>
+</div>

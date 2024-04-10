@@ -1,13 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+@import "variables";
 
 :root {
-  font-size: 16px;
+  font-size: 15px;
   font-family: "Kumbh Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "YOPQ" 300;
+}
+
+p {
+  color: $dark-grayish-blue;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin: 5px 0;
+}
+
+h3 {
+  font-size: 0.85rem;
+  color: $color-light-orange;
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 body {
@@ -31,4 +49,26 @@ body {
   top: 0;
   left: 0;
   z-index: 1;
+}
+
+.orange-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-primary;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 15px;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: bold;
+  font-size: 0.8rem;
+  min-width: 200px;
+  width: 100%;
+   img {
+     width: 15px;
+   }
+  &:active {
+    opacity: 0.5;
+  }
 }

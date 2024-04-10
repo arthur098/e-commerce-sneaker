@@ -1,0 +1,29 @@
+<div class="container">
+  <section class="carousel">
+
+  </section>
+
+  <section class="product-info">
+    <div class="product-info-text">
+      <h3 class="company-name">{{ product.companyName }}</h3>
+      <h2>{{ product.productName }}</h2>
+      <p>{{ product.productDescription }}</p>
+    </div>
+    <div class="prices">
+      <div class="current-price">
+        <h2 class="price">{{ '$' + (calculateDiscount(product) | number: '1.2-2') }}</h2>
+        <div class="discount">{{ (product.productDiscount | number: '1.0-0') + '%'  }}</div>
+      </div>
+      <div class="original-price-value">
+        {{ '$' + (product.productPrice | number: '1.2-2') }}
+      </div>
+    </div>
+    <div class="add-to-cart-input">
+      <ecs-product-quantity-input></ecs-product-quantity-input>
+      <button class="orange-button" type="button">
+        <img src="assets/img/icon-cart.svg" alt="Cart icon">&nbsp;&nbsp;Add to cart
+      </button>
+    </div>
+
+  </section>
+</div>

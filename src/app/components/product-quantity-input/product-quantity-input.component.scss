@@ -1,0 +1,53 @@
+@import "../../../variables";
+
+.input-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: auto;
+
+  input {
+    border: none;
+    background-color: $light-grayish-blue;
+    font-family: "Kumbh Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0;
+    height: 50px;
+    min-width: 30px;
+    text-align: center;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: $light-grayish-blue;
+    padding: 19px 23px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    &:first-child {
+      padding: 23px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      &:active {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+    }
+    &:active {
+      background-color: $color-secondary;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    &:disabled {
+      img {
+        opacity: 0.2;
+      }
+    }
+  }
+}
