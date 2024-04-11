@@ -2,14 +2,16 @@ import { Component } from '@angular/core';
 import { ProductModel } from '../model/product.model';
 import { ImageModel } from '../model/image.model';
 import { DecimalPipe } from '@angular/common';
-import {ProductQuantityInputComponent} from "../components/product-quantity-input/product-quantity-input.component";
+import { ProductQuantityInputComponent } from '../components/product-quantity-input/product-quantity-input.component';
+import { CarouselComponent } from '../components/carousel/carousel.component';
 
 @Component({
   selector: 'ecs-product',
   standalone: true,
   imports: [
     DecimalPipe,
-    ProductQuantityInputComponent
+    ProductQuantityInputComponent,
+    CarouselComponent
   ],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss'

@@ -1,0 +1,35 @@
+.carousel {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  img {
+    max-width: 100%;
+    transition: margin-left .5s;
+  }
+  button {
+    position: absolute;
+    top: 50%;
+    border: none;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 8px;
+    }
+    &:active {
+      opacity: 0.8;
+    }
+  }
+}
+
+.btn-previous {
+  left: 15px;
+}
+
+.btn-next {
+  right: 15px;
+}
