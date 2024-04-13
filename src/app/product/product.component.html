@@ -1,4 +1,4 @@
-<ecs-carousel [images]="product?.images"></ecs-carousel>
+<ecs-carousel [images]="product.images"></ecs-carousel>
 
 <div class="container">
   <section class="product-info">
@@ -18,7 +18,7 @@
     </div>
     <div class="add-to-cart-input">
       <ecs-product-quantity-input></ecs-product-quantity-input>
-      <button class="orange-button" type="button">
+      <button class="orange-button" type="button" (click)="addToCart(product)">
         <img src="assets/img/icon-cart.svg" alt="Cart icon">&nbsp;&nbsp;Add to cart
       </button>
     </div>

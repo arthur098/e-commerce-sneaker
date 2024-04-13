@@ -1,6 +1,6 @@
 import { ProductModel } from './product.model';
 
 export class CartModel {
-  constructor(public product?: ProductModel,
-              public quantity?:number) {}
+  constructor(public product: ProductModel = new ProductModel(),
+              public quantity:number = 0) {}
 }

@@ -1,13 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CartComponent } from '../cart/cart.component';
+import { CartModel } from '../../model/cart.model';
 
 @Component({
   selector: 'ecs-header',
   standalone: true,
-  imports: [],
+  imports: [
+    CartComponent
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+
+  @Input()
+  cartProducts: CartModel[] = [];
 
   openMenu() {
     (document.querySelector('.nav-wrapper') as HTMLElement).style.transform = 'scaleX(1)';

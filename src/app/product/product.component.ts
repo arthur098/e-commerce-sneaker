@@ -4,6 +4,8 @@ import { ImageModel } from '../model/image.model';
 import { DecimalPipe } from '@angular/common';
 import { ProductQuantityInputComponent } from '../components/product-quantity-input/product-quantity-input.component';
 import { CarouselComponent } from '../components/carousel/carousel.component';
+import { CartComponent } from '../components/cart/cart.component';
+import { CartModel } from '../model/cart.model';
 
 @Component({
   selector: 'ecs-product',
@@ -11,12 +13,14 @@ import { CarouselComponent } from '../components/carousel/carousel.component';
   imports: [
     DecimalPipe,
     ProductQuantityInputComponent,
-    CarouselComponent
+    CarouselComponent,
+    CartComponent
   ],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss'
 })
 export class ProductComponent {
+  addProduct: Function|undefined;
 
   product: ProductModel = new ProductModel('Sneaker Company',
     'Fall Limited Edition Sneakers',
@@ -36,5 +40,11 @@ export class ProductComponent {
 
   calculateDiscount(product:ProductModel): number {
     return product.productPrice - product.productPrice * (product.productDiscount / 100);
+  }
+
+  addToCart(product: ProductModel) {
+    if(this.addProduct) {
+      this.addProduct(new CartModel(product, 1));
+    }
   }
 }

@@ -1,4 +1,4 @@
-<section class="carousel">
+<div class="carousel">
   <img *ngFor="let image of images; first as isFirst" [src]="image?.image" alt="Sneaker image"
        [style.margin-left]="isFirst ? calculateNextPrevious() : ''"/>
 
@@ -8,4 +8,4 @@
   <button type="button" class="btn-next" (click)="next()">
     <img src="assets/img/icon-next.svg" alt="Icon next">
   </button>
-</section>
+</div>

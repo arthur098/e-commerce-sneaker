@@ -1,0 +1,57 @@
+@import "../../../variables";
+
+
+.cart-button {
+  background: url("/assets/img/icon-cart.svg") no-repeat;
+  border: none;
+  text-indent: -9999px;
+  width: 22px;
+  height: 20px;
+}
+
+.cart-wrapper {
+  position: absolute;
+  top: 70px;
+  right: 2.5%;
+  z-index: 1;
+  margin: 0 auto;
+  border-radius: 5px;
+  width: 95%;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.cart-title {
+  padding: 0 20px;
+  border-bottom: solid 1px $grayish-blue;
+}
+
+.cart-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.cart-product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+  }
+  button {
+    border: none;
+    background-color: white;
+    img {
+      width: 10px;
+      height: 12px;
+      border-radius: 0;
+    }
+  }
+}

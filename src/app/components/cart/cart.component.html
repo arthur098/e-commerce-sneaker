@@ -1,0 +1,28 @@
+<div class="cart">
+  <button type="button" class="cart-button" rel="Cart" (click)="showCart()">
+    Cart
+  </button>
+  <div class="cart-wrapper" *ngIf="show">
+    <div class="cart-title"><h4>Cart</h4></div>
+    <div class="cart-content" *ngIf="cartProducts.length > 0">
+
+      <div class="cart-product" *ngFor="let cartProduct of cartProducts;">
+        <img src="{{ getImage(cartProduct) }}" alt="">
+        <div>
+          <h6>{{ cartProduct.product.productName }}</h6>
+          <span>{{ cartProduct?.product?.productPrice }}</span>x<span>{{cartProduct.quantity}}</span><span>{{ '$' + (priceCalc(cartProduct) | number: '1.2-2') }}</span>
+        </div>
+        <button type="button" (click)="remove(cartProduct)">
+          <img src="assets/img/icon-delete.svg" alt="Icon remove cart item">
+        </button>
+      </div>
+
+      <button type="button" class="orange-button">
+        Checkout
+      </button>
+    </div>
+    <div class="cart-content" *ngIf="cartProducts.length === 0">
+      <h4 style="color: hsl(219, 9%, 45%)">Your cart is empty.</h4>
+    </div>
+  </div>
+</div>

@@ -1,2 +1,2 @@
-<ecs-header></ecs-header>
-<router-outlet />
+<ecs-header [cartProducts]="cartProducts"></ecs-header>
+<router-outlet (activate)="passFunctionToChild($event)"/>
